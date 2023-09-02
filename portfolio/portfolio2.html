@@ -59,6 +59,30 @@
             margin: 0 10px; */
 
         }
+
+        .typewriter h2 {
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation: 
+                typing 3.5s steps(30, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange; }
+        }
+
         .profile-image img {
             max-width: 80%;
             border-radius: 50%;
@@ -245,7 +269,9 @@
     <section id="about-me" class="section">
         <div class="about-content">
             <div class="about-text">
-                <h2 style="padding-left: 150px; font-size: xxx-large;">Janvi Choudhary</h2>
+                <div class="typewriter">
+                    <h2 style="padding-left: 150px; font-size: xxx-large;">Janvi Choudhary</h2>
+                </div>
                 <p style="padding-left: 150px; font-size: large;">👋 Hello, World! I'm Janvi Choudhary – a creative mind, an ML Enthusiast, <br>and a passionate Open Source Contributor, all rolled into one! 🚀 <br>From crafting user-friendly apps to contributing to open source projects,<br>💡 I'm always on the lookout for ways to make an impact.</p>
                 <div class="buttons">
                     <a href="path-to-your-cv.pdf" class="btn">View CV</a>
@@ -435,9 +461,9 @@
         <h2 style="text-align: center; font-size: xx-large;">Let's Connect</h2>
         <div class="social-icons">
             <a href="https://www.instagram.com/your-profile" target="_blank"><img src="insta.png" alt="Instagram"></a>
-            <a href="https://github.com/your-profile" target="_blank"><img src="github.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
-            <a href="mailto:your-email@example.com"><img src="gmail.png" alt="Email"></a>
+            <a href="https://github.com/inkerton" target="_blank"><img src="github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/janvi-choudhary-68a199225/" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="mailto:janvichoudhary116@gmail.com"><img src="gmail.png" alt="Email"></a>
             <!-- Your other social icons here -->
             <!-- <div class="video-container">
                 <video controls autoplay loop>
