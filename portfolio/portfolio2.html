@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janvi Choudhary - Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            color: #ffffff;
+            background-color: #000000;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 15px 0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-shadow: #000000;
+            text-decoration: none;
+            text-align: right;
+            margin: auto;
+        }
+
+        .navbar a:hover {
+            color: #ffffff;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 50px 0;
+            padding-left: 20px;
+        }
+
+        /* About Me Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .about-text {
+            flex: 1;
+            padding-right: 30px;
+            /* background-color: #ab6ee8;
+            margin: 10px;
+            padding: 40px 100px;
+            border-radius: 10px;
+            margin: 0 10px; */
+
+        }
+        .profile-image img {
+            max-width: 80%;
+            border-radius: 50%;
+            padding-right: 150px;
+            max-height: 500px;
+        }
+        .buttons {
+            margin-top: 20px;
+            padding-left: 150px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6600cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .btn:hover {
+            background-color: #66ccff;
+            box-shadow: 0 0 10px rgba(102, 204, 255, 0.8);
+        }
+
+        /* My Projects Section */
+        .project-cards {
+            display: flex;
+            justify-content: space-between;
+        }
+        .project-card {
+            flex: 1;
+            background-color: #ab6ee8;
+            margin: 10px;
+            padding: 40px 20px;
+            border-radius: 10px;
+            margin: 0 10px;
+            text-align: center;
+        }
+        .project-card a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .project-image img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        /* My Experience Section */
+        .milestone-graph {   /* changed it to vertical line now need to add horizontal lines and milestones*/
+            justify-content: space-between;
+            position: relative;
+            width: 2px;
+            height: 600px; /* Adjust the height as needed */
+            background-color: rgb(0, 0, 0);
+            align-content: center;
+            margin: 0 20px;
+        }
+        .milestone {
+            width: 70px;
+            height: 100px;
+            flex: 1;
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 10px;
+            text-align: center;
+            position: relative;
+            display: flex; /* Use flex to align content vertically */
+            align-items: center; /* Align content vertically */
+            justify-content: center; /* Align content horizontally */
+        }
+        .milestone-content {
+            color: #fff;
+            text-decoration-color: #f4d7c6;
+            position: absolute;
+            padding-block: 10px;
+            top: 20%;
+            bottom: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .milestone h3, .milestone p {
+            margin: 0;
+        }
+
+        /* Let's Connect Section */
+        .lets-connect {
+            background-color: #000000;
+            padding: 10px 0;
+            padding-left: 20px;
+            color: #fff;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            margin: 0 15px;
+            transition: transform 0.3s;
+        }
+        .social-icons a img {
+            max-width: 40px;
+            max-height: 40px;
+        }
+
+        @keyframes move {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(100px); /* Adjust the value to your preference */
+        }
+        }
+
+        .moving-svg {
+            animation: move 3s linear infinite forwards; /* Adjust the animation duration and timing function */
+            max-width: 10%;
+            max-height: 20%;
+            padding-left: 120px;
+        }
+
+        /* .video-container video {
+            max-width: 200px;
+            max-height: 100px;
+            justify-content: right;
+        } */
+
+        /* Footer */
+        .footer {
+            background-color: #6600cc;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#about-me">About Me</a>
+        <a href="#my-projects">My Projects</a>
+        <a href="#my-experience">My Experience</a>
+        <a href="#lets-connect">Let's Connect</a>
+    </nav>
+    
+    <section id="about-me" class="section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2 style="padding-left: 150px; font-size: xx-large;">Janvi Choudhary</h2>
+                <p style="padding-left: 150px; font-size: large;">👋 Hello, World! I'm Janvi Choudhary – a creative mind, an ML Enthusiast, <br>and a passionate Open Source Contributor, all rolled into one! 🚀 <br>From crafting user-friendly apps to contributing to open source projects,<br>💡 I'm always on the lookout for ways to make an impact.</p>
+                <div class="buttons">
+                    <a href="path-to-your-cv.pdf" class="btn">View CV</a>
+                    <a href="https://github.com/inkerton" class="btn">Visit on GitHub</a>
+                </div>
+                <svg class="moving-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" width="500" height="500" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;" id="Circle Loader"><defs><clipPath id="__lottie_element_14502"><rect width="500" height="500" x="0" y="0"/></clipPath></defs><g clip-path="url(#__lottie_element_14502)"><g transform="matrix(0.009916036389768124,0,0,0.009916036389768124,385.1604309082031,250)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(0.1237500011920929,0,0,0.1237500011920929,0,0)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M0,-250 C137.97500610351562,-250 250,-137.97500610351562 250,0 C250,137.97500610351562 137.97500610351562,250 0,250 C-137.97500610351562,250 -250,137.97500610351562 -250,0 C-250,-137.97500610351562 -137.97500610351562,-250 0,-250z"/></g></g><g transform="matrix(0.11946211755275726,0,0,0.11946211755275726,363.5787048339844,250)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(0.1237500011920929,0,0,0.1237500011920929,0,0)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M0,-250 C137.97500610351562,-250 250,-137.97500610351562 250,0 C250,137.97500610351562 137.97500610351562,250 0,250 C-137.97500610351562,250 -250,137.97500610351562 -250,0 C-250,-137.97500610351562 -137.97500610351562,-250 0,-250z"/></g></g><g transform="matrix(0.27253368496894836,0,0,0.27253368496894836,324.73760986328125,250)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(0.1237500011920929,0,0,0.1237500011920929,0,0)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M0,-250 C137.97500610351562,-250 250,-137.97500610351562 250,0 C250,137.97500610351562 137.97500610351562,250 0,250 C-137.97500610351562,250 -250,137.97500610351562 -250,0 C-250,-137.97500610351562 -137.97500610351562,-250 0,-250z"/></g></g><g transform="matrix(0.3852726221084595,0,0,0.3852726221084595,275.5902404785156,250)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(0.1237500011920929,0,0,0.1237500011920929,0,0)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M0,-250 C137.97500610351562,-250 250,-137.97500610351562 250,0 C250,137.97500610351562 137.97500610351562,250 0,250 C-137.97500610351562,250 -250,137.97500610351562 -250,0 C-250,-137.97500610351562 -137.97500610351562,-250 0,-250z"/></g></g><g transform="matrix(0.3765442371368408,0,0,0.3765442371368408,223.36090087890625,250)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(0.1237500011920929,0,0,0.1237500011920929,0,0)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M0,-250 C137.97500610351562,-250 250,-137.97500610351562 250,0 C250,137.97500610351562 137.97500610351562,250 0,250 C-137.97500610351562,250 -250,137.97500610351562 -250,0 C-250,-137.97500610351562 -137.97500610351562,-250 0,-250z"/></g></g><g transform="matrix(0.25323665142059326,0,0,0.25323665142059326,175.2654571533203,250)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(0.1237500011920929,0,0,0.1237500011920929,0,0)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M0,-250 C137.97500610351562,-250 250,-137.97500610351562 250,0 C250,137.97500610351562 137.97500610351562,250 0,250 C-137.97500610351562,250 -250,137.97500610351562 -250,0 C-250,-137.97500610351562 -137.97500610351562,-250 0,-250z"/></g></g><g transform="matrix(0.10015637427568436,0,0,0.10015637427568436,138.51683044433594,250)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(0.1237500011920929,0,0,0.1237500011920929,0,0)"><path fill="rgb(0,0,0)" fill-opacity="1" d=" M0,-250 C137.97500610351562,-250 250,-137.97500610351562 250,0 C250,137.97500610351562 137.97500610351562,250 0,250 C-137.97500610351562,250 -250,137.97500610351562 -250,0 C-250,-137.97500610351562 -137.97500610351562,-250 0,-250z"/></g></g></g></svg>
+            </div>
+            <div class="profile-image">
+                <img src="your-image.png" alt="Janvi Choudhary">
+            </div>
+        </div>
+    </section>
+    
+    <section id="my-projects" class="section">
+        <h2 style="text-align: center; font-size: x-large;">My Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <a href="https://github.com/your-project-link">
+                    <div class="project-image">
+                        <img src="project-image.png" alt="Project 1">
+                    </div>
+                    <h3>Landing Page</h3>
+                    <p>An HTML, CSS incripted landing page for a Space Blog.</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://github.com/your-project-link">
+                    <div class="project-image">
+                        <img src="github.png" alt="Project 1">
+                    </div>
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1.</p>
+                </a>
+            </div>
+            <!-- Repeat similar structure for other project cards -->
+        </div>
+    </section>
+    
+    <section id="my-experience" class="section"><hr>
+        <h2 style="text-align: center; font-size: x-large;">My Experience</h2>
+        <div class="milestone-graph">
+            <div class="milestone">
+                <div class="milestone-content">
+                    <h3>WEB DEVELOPMENT INTERN</h3>
+                    <p>Oasis Infobyte</p>
+                </div>
+            </div>
+            <!-- Repeat similar structure for other milestones -->
+            <div class="milestone">
+                <div class="milestone-content">
+                    <h3>MACHINE LEARNING INTERN</h3>
+                    <p>Tech-A-Intern</p>
+                </div>
+            </div>
+            <div class="milestone">
+                <div class="milestone-content">
+                    <h3>MACHINE LEARNING INTERN</h3>
+                    <p>Tech-A-Intern</p>
+                </div>
+            </div>
+            <div class="milestone">
+                <div class="milestone-content">
+                    <h3>MACHINE LEARNING INTERN</h3>
+                    <p>Tech-A-Intern</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="lets-connect" class="lets-connect">
+        <h2>Let's Connect</h2>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/your-profile" target="_blank"><img src="insta.png" alt="Instagram"></a>
+            <a href="https://github.com/your-profile" target="_blank"><img src="github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank"><img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="mailto:your-email@example.com"><img src="gmail.png" alt="Email"></a>
+            <!-- Your other social icons here -->
+            <!-- <div class="video-container">
+                <video controls autoplay loop>
+                    <source src="customer-review.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div> -->
+        </div>
+        <p style="text-align: center;">Contact: janvichoudhary116@gmail.com | Phone: 8459137385 | Location: New Delhi, India</p>
+    </section>
+    
+    <!-- <footer class="footer">
+        <p>Contact: janvichoudhary116@gmail.com | Phone: 8459137385 | Location: New Delhi, India</p>
+    </footer> -->
+</body>
+</html>

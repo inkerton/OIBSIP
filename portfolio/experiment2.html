@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Experience Timeline</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        /* My Experiences */
+        .section {
+            display: flex;
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 20px;
+            /* position: fixed; */
+            top: 30px;
+            left: 0;
+            bottom: 0;
+            overflow-y: auto;
+            text-align: center;
+            margin: 56px 20px;
+            border-radius: 3px;
+            /* text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer; */
+        }
+
+        .experience-menu-item {
+            background-color: #000000; /* Green */
+            border: none;
+            color: white;
+            max-width: 100%;
+            width: 98%; /* Set width to 100% so the buttons are of same width */
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        /* Timeline */
+        .timeline {
+            margin-left: 290px; /* Adjusted this based on your sidebar width */
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 2px;
+        }
+
+        /* Timeline Entry */
+        .entry {
+            border-left: 3px solid #3498db;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: white;
+            display: none;
+        }
+
+        .entry.active {
+            border-left: 3px solid #000000;
+            display: block;
+        }
+
+        /* Details */
+        .details {
+            display: none;
+        }
+
+        .details.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <section id="my-experience" class="section">
+    <h2>My Experiences</h2><br>
+    <div class="sidebar">
+        <button class="experience-menu-item" data-id="1">Web Development Intern<br><p style="font-size: small; margin-top: 2; margin-bottom: 0;">At Oasis Infobyte</p></button>
+        <button class="experience-menu-item" data-id="2">Machine Learning Intern<br><p style="font-size: small; margin-top: 2; margin-bottom: 0;">At Tech-A-Intern</p></button>
+        <button class="experience-menu-item" data-id="3">Machine Learning Intern<br><p style="font-size: small; margin-top: 2; margin-bottom: 0;">At TechNoHacks</p></button>
+        <button class="experience-menu-item" data-id="4">Data Science Intern<br><p style="font-size: small; margin-top: 2; margin-bottom: 0;">At CodeClause</p></button>
+        <!-- Add more buttons for other experiences -->
+    </div>
+
+    <div class="timeline">
+        <div class="entry" data-id="1">
+            <div class="details active">
+            <h3>Web Development Intern</h3>
+            <p>Oasis Infobyte</p>
+            
+                <!-- Details of Web Development Intern -->
+                <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    I'm thrilled to share my incredible experience as a Web Development Intern, where I embarked on a journey of creativity, innovation, and learning at its best. My time at Oasis Infobyte was not just about building web pages; it was about crafting immersive experiences that combined my love for technology, space exploration, and graphic design.
+                    I embarked on a dynamic learning journey that not only honed my technical skills but also reaffirmed the importance of strong fundamentals in coding.<br><br>
+                    <b>Task 1: Landing Page 🚀-Exploring the Cosmos</b> <br><br>
+                    One of the highlights of this internship was creating a captivating landing page for a space blog. The cosmos has always fascinated me, and this project allowed me to merge my passion for space exploration with my newfound web development skills. Crafting an interface where enthusiasts can delve into the mysteries of the universe was a truly fulfilling endeavor.<br><br>
+                    <b>Task 2: Portfolio 📂-Merging Tech and Creativity: A Holistic Approach 🎨</b><br><br>
+                    While my heart lies in machine learning, I'm equally drawn to graphic design. This internship allowed me to bridge the gap between these two seemingly different worlds. I infused creativity into the code, ensuring that aesthetics were as important as functionality. This holistic approach not only enhanced user experiences but also highlighted the synergy between technology and art.<br><br>
+                    <b>Task 3: Temperature Converter 🌡️</b><br><br>
+                    The temperature converter project was a delightful venture into JavaScript. As I coded the logic to convert temperatures between units, I realized the beauty of problem-solving through coding. This task strengthened my understanding of JavaScript and its practical applications.<br><br>
+                    <b>Looking Forward: A Universe of Possibilities 🌟</b><br><br>
+                    This internship reaffirmed my belief that technology is a canvas for limitless innovation. Whether it's exploring the cosmos or crafting intricate designs, every project is a chance to push boundaries and transcend the ordinary. I'm excited to carry forward these lessons as I continue my journey as a creative coder and an ML enthusiast.
+                </p>
+            </div>
+        </div>
+
+        <div class="entry" data-id="2">
+            <div class="details">
+            <h3>Machine Learning Intern</h3>
+            <p>Tech-A-Intern</p>
+            
+                <!-- Details of Machine Learning Intern -->
+                <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    Reflecting on an enriching journey in the realm of Machine Learning! 📊🎬<br><br>
+
+                    My experience as a Machine Learning Intern at Tech-A-INTERN has been a remarkable voyage of discovery and skill-building. Through the completion of Level-3, where I focused on crafting a Movie Recommendation System, I've gained insights that have not only expanded my knowledge but also deepened my passion for machine learning.<br><br>
+
+                    <b>Configuring Kaggle API: A Gateway to Data 📡</b><br><br>
+                    One of the highlights of this journey was mastering the configuration of the Kaggle API. This skill opened the doors to a treasure trove of datasets, empowering me to explore real-world data and extract meaningful insights. This experience underscored the importance of efficient data acquisition in the realm of machine learning.<br><br>
+
+                    <b>Exploring the Dataset: A Dive into Insights 📊</b><br><br>
+                    The journey of crafting a movie recommendation system began with diving into the dataset. I honed my skills in data preprocessing and exploration, understanding the nuances that can impact model performance. This step was a reminder that behind every algorithm is a rich tapestry of data that holds the key to actionable insights.<br><br>
+
+                    <b>Demographic, Content-Based, and Collaborative Filtering: Crafting Recommendations 🎥</b><br><br>
+                    Creating the recommendation system was a multifaceted endeavor. I delved into demographic filtering, leveraging data attributes to provide broad suggestions. Content-based filtering allowed me to tailor recommendations based on individual preferences, while collaborative filtering tapped into the power of collective intelligence for precision.<br><br>
+
+                    <b>Harnessing Pandas and NumPy: The Tools of Mastery 🐼🔢</b><br><br>
+                    Throughout this journey, I wielded the power of Pandas and NumPy libraries to manipulate and analyze data. These tools were not just a means to an end; they were the keys to unlocking insights. I'm reminded that mastering the tools of the trade is essential for translating ideas into impactful solutions.<br><br>
+
+                    <b>Looking Ahead: The Horizon of Possibilities 🌅</b><br><br>
+                    As I reflect on my internship experience, I'm inspired by the infinite possibilities that machine learning offers. The ability to transform data into actionable insights is a superpower that can drive innovation across industries. This journey has reaffirmed my commitment to continuous learning and exploration in the field.<br><br>
+                </p>
+            </div>
+        </div>
+        <!-- Add more timeline entries for other experiences -->
+        <div class="entry" data-id="3">
+            <div class="details">
+            <h3>Machine Learning Intern</h3>
+            <p>TechNoHacks</p>
+            
+                <!-- Details of Machine Learning Intern -->
+                <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    My experience as a Machine Learning Intern at Technohacks has been a thrilling exploration of data, algorithms, and their incredible potential. Completing three impactful tasks - Movie Review Classification, Fraud Transaction Detection, and Wine Quality Prediction - I've embarked on a dynamic learning curve that has deepened my understanding and ignited my passion for the world of ML.<br><br>
+
+                    <b>Task 1: Movie Review Classification 🎬</b><br><br>
+                    The journey began with Movie Review Classification, where I harnessed the power of Natural Language Processing. I delved into sentiment analysis, using ML techniques to categorize reviews. This task introduced me to the nuances of text data and the art of converting words into insights.<br><br>
+
+                    <b>Task 2: Fraud Transaction Detection 💳</b><br><br>
+                    The Fraud Transaction Detection task was an eye-opening experience in anomaly detection. I explored techniques to identify patterns that hint at fraudulent activities in transactions. This task underscored the significance of data-driven decision-making in safeguarding financial systems.<br><br>
+
+                    <b>Task 3: Wine Quality Prediction 🍷</b><br><br>
+                    Predicting wine quality was an immersive venture into regression. From understanding the dataset to experimenting with various algorithms, I learned the art of model selection and parameter tuning. This task underscored that behind every prediction lies meticulous testing and analysis.<br><br>
+
+                    <b>Mastering Libraries and Tools 📚🔧</b><br><br>
+                    Throughout this journey, I dived into powerful libraries like Scikit-learn for modeling, Seaborn and Matplotlib for visualization, and CatBoost for boosting models. These tools were not just instrumental; they were the instruments through which I translated ideas into results.<br><br>
+                </p>
+            </div>
+        </div>
+
+        <div class="entry" data-id="4">
+            <div class="details">
+            <h3>Data Science Intern</h3>
+            <p>CodeClause</p>
+            
+                <!-- Details of Machine Learning Intern -->
+                <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                    My experience as a Data Science Intern at CodeClause has been a remarkable odyssey into the world of data, algorithms, and their boundless applications. Completing two impactful tasks - Age and Gender Detection and Customer Segmentation - I've not only honed my technical skills but also witnessed the power of data-driven insights.<br><br>
+
+                    <b>Task 1: Age and Gender Detection 🕵️‍♂️</b><br><br>
+                    The journey began with Age and Gender Detection, where I explored computer vision and machine learning. Using the powerful PIL and TensorFlow libraries, I navigated through image processing techniques to predict age and gender accurately. This task was a glimpse into how data can unveil hidden patterns in visual information.<br><br>
+
+                    <b>Task 2: Customer Segmentation 📊</b><br><br>
+                    In the Customer Segmentation task, I dived into the realm of clustering and data analysis. By utilizing K-means clustering, I grouped customers based on similar attributes and visualized these relationships. This task highlighted how data-driven insights can shape marketing strategies and enhance customer experiences.<br><br>
+
+                    <b>Harnessing New Libraries and Tools 📚🔧</b><br><br>
+                    Throughout this journey, I embraced cutting-edge tools such as PIL for image processing, TensorFlow for deep learning, and data visualization techniques. These tools weren't just resources; they were the conduits through which I transformed complex data into actionable insights.<br><br>
+
+                    <b>Visualizing Insights: Illuminating the Unknown 📈✨</b><br><br>
+                    One of the most thrilling aspects of this internship was visualizing data relations. By plotting and analyzing graphs, I unearthed connections between customer attributes. These visual insights were a reminder that behind every data point lies a story waiting to be revealed.<br><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const experienceMenuItems = document.querySelectorAll(".experience-menu-item");
+        const entries = document.querySelectorAll(".entry");
+        const detailsBlocks = document.querySelectorAll(".details");
+
+
+    experienceMenuItems.forEach(item => {
+        item.addEventListener("click", () => {
+            // Hide all entries and details
+            entries.forEach(entry => entry.classList.remove("active"));
+                detailsBlocks.forEach(details => details.classList.remove("active"));
+
+                // Show the clicked entry and details
+                const experienceId = item.getAttribute("data-id");
+                const entry = document.querySelector(`.entry[data-id="${experienceId}"]`);
+                const details = entry.querySelector(".details");
+                
+                // Hide the default entry and show the clicked entry
+                const defaultEntry = document.querySelector('.entry[data-id="1"]');
+                defaultEntry.classList.remove("active");
+                defaultEntry.querySelector(".details").classList.remove("active");
+                entry.classList.add("active");
+                details.classList.add("active");
+            });
+        });
+
+    // Initialize the first menu item and entry and details block as active
+    experienceMenuItems[0].classList.add("active");
+    entries[0].classList.add("active");
+    detailsBlocks[0].classList.add("active");
+    </script>
+    </section>
+</body>
+</html>
