@@ -120,21 +120,36 @@
             color: #000000;
             margin-left: 10%;
             margin-right: 10%;
+            padding-top: 20px;
         }
 
         .about-us p{
             font-size: large;
+            text-align: inline-block;
+            line-height: 1.5;/*line spacing*/
         }
 
         .about-us b{
             font-size: larger;
+            /* padding-bottom: 10px; */
         }
-        
+
+        .about-us b:hover {
+            background-color: #ccacf9;
+            padding: 5px;
+            border-radius: 7px;
+            
+        }
+
+
+        /* Contact us Section */
         .contact-us {
-            background-color: #000000;
+            background-color: #ccacf9;
+            color: #000000;
             padding: 50px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            margin: 100px;
         }
         
         .contact-us-button {
@@ -154,7 +169,7 @@
         }
 
         .subscribe {
-            text-align: center;
+            text-align: left;
             margin-top: 20px;
         }
         
@@ -180,6 +195,177 @@
             background-color: #ff0000;
             box-shadow: 0 0 10px rgba(249, 4, 4, 0.8);
         }
+
+        /* letter animation */
+        .letter-animation {
+            text-align: right;
+            float: right;
+        }
+        
+        .letter-image {
+            position: flex;
+            text-align: right;
+            top: 0%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+
+        .animated-mail {
+            position: absolute;
+            height: 150px;
+            width: 200px;
+            -webkit-transition: .4s;
+            -moz-transition: .4s;
+            transition: .4s;
+            
+            .body {
+                position: absolute;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 100px 200px;
+                border-color: transparent transparent #e95f55 transparent;
+                z-index: 2;
+            }
+        
+            .top-fold {
+                position: absolute;
+                top: 50px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 50px 100px 0 100px;
+                -webkit-transform-origin: 50% 0%;
+                -webkit-transition: transform .4s .4s, z-index .2s .4s;
+                -moz-transform-origin: 50% 0%;
+                -moz-transition: transform .4s .4s, z-index .2s .4s;
+                transform-origin: 50% 0%;
+                transition: transform .4s .4s, z-index .2s .4s;
+                border-color: #cf4a43 transparent transparent transparent;
+                z-index: 2;
+            }
+            
+            .back-fold {
+                position: absolute;
+                bottom: 0;
+                width: 200px;
+                height: 100px;
+                background: #cf4a43;
+                z-index: 0;
+            }
+            
+            .left-fold {
+                position: absolute;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 50px 0 50px 100px;
+                border-color: transparent transparent transparent #e15349;
+                z-index: 2;
+            }
+            
+            .letter {
+                left: 20px;
+                bottom: 0px;
+                position: absolute;
+                width: 160px;
+                height: 60px;
+                background: white;
+                z-index: 1;
+                overflow: hidden;
+                -webkit-transition: .4s .2s;
+                -moz-transition: .4s .2s;
+                transition: .4s .2s;
+                
+                
+            .letter-border {
+                    height: 10px;
+                    width: 100%;
+                    background: repeating-linear-gradient(
+                        -45deg,
+                        #cb5a5e,
+                        #cb5a5e 8px,
+                        transparent 8px,
+                        transparent 18px
+                    );
+                }
+                
+                .letter-title {
+                    margin-top: 10px;
+                    margin-left: 5px;
+                    height: 10px;
+                    width: 40%;
+                    background: #cb5a5e;
+                }
+                .letter-context {
+                    margin-top: 10px;
+                    margin-left: 5px;
+                    height: 10px;
+                    width: 20%;
+                    background: #cb5a5e;
+                }
+                
+                .letter-stamp {
+                    margin-top: 30px;
+                    margin-left: 120px;
+                    border-radius: 100%;
+                    height: 30px;
+                    width: 30px;
+                    background: #cb5a5e;
+                    opacity: 0.3;
+                }
+            }
+        }
+
+        .shadow {
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            width: 400px;
+            height: 30px;
+            transition: .4s;
+            transform: translateX(-50%);
+            -webkit-transition: .4s;
+            -webkit-transform: translateX(-50%);
+            -moz-transition: .4s;
+            -moz-transform: translateX(-50%);
+            
+            border-radius: 100%;
+            background: radial-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0), rgba(0,0,0,0.0));
+        }
+
+            .letter-image:hover {
+                .animated-mail {
+                    transform: translateY(50px);
+                    -webkit-transform: translateY(50px);
+                    -moz-transform: translateY(50px);
+                }
+                
+                .animated-mail .top-fold {
+                    transition: transform .4s, z-index .2s;
+                    transform: rotateX(180deg);
+                    -webkit-transition: transform .4s, z-index .2s;
+                    -webkit-transform: rotateX(180deg);
+                    -moz-transition: transform .4s, z-index .2s;
+                    -moz-transform: rotateX(180deg);
+                    z-index: 0;
+                }
+                
+                .animated-mail .letter {
+                    height: 180px;
+                }
+                
+                .shadow {
+                    width: 250px;
+                }
+            }
         
     </style>
 </head>
@@ -189,7 +375,7 @@
     </div>
 
     <div class="nav-bar">
-        <a href="#">Home</a>
+        <a href="#intro-section">Home</a>
         <a href="#blog-section">Blog</a>
         <a href="#about-section">About Us</a>
         <a href="#contact-section">Contact Us</a>
@@ -207,56 +393,76 @@
 
     <!-- About Us Section -->
     <div class="section about-us" id="about-section">
-        <h2 style="font-size: xx-large;">About Us</h2>
-        <p>At Space Blog, we are passionate about the wonders of the universe. Our team of astronomers, scientists, and space enthusiasts is dedicated to bringing you the latest discoveries and insights from the cosmos.<br><br>
-            <b><i>Welcome to Space Blog - A Cosmic Journey through the Universe and Beyond</i></b><br>
+        <h2 style="font-size: xxx-large;">About Us</h2>
+        <p>At Space Blog🌌, we are passionate about the wonders of the universe. Our team of astronomers, scientists, and space enthusiasts is dedicated to bringing you the latest discoveries and insights from the cosmos.<br><br><br>
+            <b><i>Welcome to Space Blog - A Cosmic 🌟Journey through the Universe and Beyond</i></b><br>
 
-            Are you ready to embark on a celestial adventure that will take you on a breathtaking journey through the cosmos? Look no further than Space Blog, your ultimate source for all things related to space exploration, astronomy, and the mysteries of the universe.<br><br>
+            Are you ready to embark on a celestial adventure that will take you on a breathtaking journey through the cosmos? Look no further than Space Blog, your ultimate source for all things related to space exploration, astronomy, and the mysteries of the universe.<br><br><br>
 
-            <b><i>Unveiling the Wonders of the Universe</i></b><br>
+            <b><i>Unveiling the Wonders of the Universe</i>🌃</b><br>
 
-            At Space Blog, we are passionate about unraveling the mysteries of the cosmos and sharing our fascination with you. Our team is composed of dedicated astronomers, space scientists, and avid space enthusiasts who are committed to bringing you the latest discoveries, mind-blowing phenomena, and profound insights from the vast expanse of space.<br><br>
+            At Space Blog, we are passionate about unraveling the mysteries of the cosmos and sharing our fascination with you. Our team is composed of dedicated astronomers, space scientists, and avid space enthusiasts who are committed to bringing you the latest discoveries, mind-blowing phenomena, and profound insights from the vast expanse of space.<br><br><br>
 
-            <b><i>The Cosmos Unveiled</i></b><br>
+            <b><i>The Cosmos Unveiled</i>😌</b><br>
 
-            Our blog is your portal to the most astonishing phenomena the universe has to offer. We delve into topics ranging from the enigmatic beauty of distant galaxies to the inner workings of stars and planets. You'll find articles that explain complex astrophysical concepts in an easy-to-understand manner, making the universe accessible to everyone.<br><br>
+            Our blog is your portal to the most astonishing phenomena the universe has to offer. We delve into topics ranging from the enigmatic beauty of distant galaxies to the inner workings of stars and planets. You'll find articles that explain complex astrophysical concepts in an easy-to-understand manner, making the universe accessible to everyone.<br><br><br>
 
-            <b><i>Stay Informed and Inspired</i></b><br>
+            <b><i>Stay Informed and Inspired</i>🦄</b><br>
 
-            Stay up-to-date with the latest space missions, groundbreaking research, and technological innovations that are shaping the future of space exploration. Whether it's NASA's latest rover on Mars, the search for habitable exoplanets, or the mysteries of dark matter and black holes, we've got you covered.<br><br>
+            Stay up-to-date with the latest space missions, groundbreaking research, and technological innovations that are shaping the future of space exploration. Whether it's NASA's latest rover on Mars, the search for habitable exoplanets, or the mysteries of dark matter and black holes, we've got you covered.<br><br><br>
 
-            <b><i>Meet the Experts</i></b><br>
+            <b><i>Meet the Experts</i>🕵🏻‍♂️</b><br>
 
-            Our blog isn't just about information; it's also about the people behind the discoveries. Get to know the brilliant minds pushing the boundaries of human knowledge. We feature exclusive interviews with astronomers, astrophysicists, and astronauts, giving you a behind-the-scenes look at their work and the passion that drives them.<br><br>
+            Our blog isn't just about information; it's also about the people behind the discoveries. Get to know the brilliant minds pushing the boundaries of human knowledge. We feature exclusive interviews with astronomers, astrophysicists, and astronauts, giving you a behind-the-scenes look at their work and the passion that drives them.<br><br><br>
 
-            <b><i>Astronomy for All Ages</i></b><br>
+            <b><i>Astronomy for All Ages</i>👻</b><br>
 
-            Space Blog is for everyone, from seasoned stargazers to those taking their first steps into the world of astronomy. Whether you're a student looking for resources, an amateur astronomer seeking tips for stargazing, or a seasoned professional eager to stay informed, you'll find something here to spark your curiosity.<br><br>
+            Space Blog is for everyone, from seasoned stargazers to those taking their first steps into the world of astronomy. Whether you're a student looking for resources, an amateur astronomer seeking tips for stargazing, or a seasoned professional eager to stay informed, you'll find something here to spark your curiosity.<br><br><br>
 
-            <b><i>Get Involved</i></b><br>
+            <b><i>Get Involved</i>⛺</b><br>
 
-            We believe that the wonders of space are best explored together. Join our vibrant community of space enthusiasts. Share your own observations, thoughts, and questions in our comment sections, and connect with like-minded individuals who share your passion for the cosmos.<br><br>
+            We believe that the wonders of space are best explored together. Join our vibrant community of space enthusiasts. Share your own observations, thoughts, and questions in our comment sections, and connect with like-minded individuals who share your passion for the cosmos.<br><br><br>
 
-            <b><i>Subscribe for Cosmic Updates</i></b><br>
+            <b><i>Subscribe for Cosmic Updates</i>🫣</b><br>
 
-            Don't miss out on the latest cosmic discoveries and updates from Space Blog. Subscribe to our newsletter, and we'll deliver the wonders of the universe straight to your inbox. Stay informed, stay inspired, and stay connected with the cosmos.<br><br>
+            Don't miss out on the latest cosmic discoveries and updates from Space Blog. Subscribe to our newsletter, and we'll deliver the wonders of the universe straight to your inbox. Stay informed, stay inspired, and stay connected with the cosmos.<br><br><br>
 
-            <b><i>Your Cosmic Journey Begins Here</i></b><br>
+            <b><i>Your Cosmic Journey Begins Here</i>🎆</b><br>
 
-            Whether you're seeking knowledge, inspiration, or simply a sense of wonder, Space Blog is your launching pad to the infinite mysteries of the universe. Join us as we explore the cosmos, one star at a time, and together, let's reach for the stars.<br><br>
+            Whether you're seeking knowledge, inspiration, or simply a sense of wonder, Space Blog is your launching pad to the infinite mysteries of the universe. Join us as we explore the cosmos, one star at a time, and together, let's reach for the stars.<br><br><br>
         </p>
     </div>
 
     <!-- Contact Us Section -->
     <div class="section contact-us" id="contact-section">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to get in touch with us? Feel free to reach out using the form below. You can also subscribe to our newsletter to stay updated with the latest space news.</p><br><br>
-        <h2 style="text-align: center;">SUBSCRIBE TO OUR NEWSLETTER</h2>
+        <h2 style="font-size: xx-large;">Contact Us</h2>
+        <p style="font-size: large;"><b>Have questions or want to get in touch with us?<br> Feel free to reach out using the form below.<br> You can also subscribe to our newsletter to stay updated with the latest space news.</b></p><br><br>
+        <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
         <form class="subscribe">
             <input type="email" placeholder="Your Email Address">
             <button type="submit">Subscribe</button>
         </form><br><br>
+        <div class="letter-animation">
+            <div class="letter-image">
+                <div class="animated-mail">
+                <div class="back-fold"></div>
+                <div class="letter">
+                    <div class="letter-border"></div>
+                    <div class="letter-title"></div>
+                    <div class="letter-context"></div>
+                    <div class="letter-stamp">
+                    <div class="letter-stamp-inner"></div>
+                    </div>
+                </div>
+                <div class="top-fold"></div>
+                <div class="body-fold"></div>
+                <div class="left-fold"></div>
+                </div>
+                <div class="shadow"></div>
+            </div>
+        </div>
     </div>
+    
 
     <!-- Blog Section -->
     <!-- <div class="section blog" id="blog-section">
